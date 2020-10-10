@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 10 15:19:13 2020
-
 @author: kunal
 """
 
@@ -178,7 +174,7 @@ last_proof_number = last_block.proof_number
 
 proof_number = blockchain.proof_of_work(last_proof_number)
 
-sendKey = input("Enter your public key: ")
+sendKey = "9876dcba"
 receiverKey = "1234abcd"
 cryptoAmount = input("Amount to be invested: ")
 
@@ -197,11 +193,6 @@ last_hash = last_block.compute_hash
 block = blockchain.build_block(proof_number, last_hash)
 
 
-if(flag==0):
-    print("TRANSACTION HAS BEEN SUCCESSFUL!")
-    print(sendKey)
-    print(receiverKey)
-    print(cryptoAmount)
-else:
-    print("BLOCKCHAIN TAMPERED!")
+return flag
+    
     
